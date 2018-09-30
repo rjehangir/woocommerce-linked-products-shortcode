@@ -257,7 +257,6 @@ class WC_Linked_Products_Shortcode {
 
 } // end \WC_Linked_Products_Shortcode class
 
-
 /**
  * Returns the One True Instance of WC_Linked_Products_Shortcode
  *
@@ -315,7 +314,11 @@ if ( ! function_exists( 'woocommerce_cross_sell_display' ) ) {
     }
 }
 
-
+/**
+ * Override text strings to change upsell and cross-sell labels.
+ *
+ * @since 1.0.0
+*/
 function linked_product_new_text_strings( $translated_text, $text, $domain ) {
     switch ( $translated_text ) {
         case 'You may also like&hellip;':
@@ -335,7 +338,6 @@ function linked_product_new_text_strings( $translated_text, $text, $domain ) {
 }
 // change labels
 add_filter( 'gettext', 'linked_product_new_text_strings', 10, 3 );
-
 
 // fire it up!
 wc_linked_products_shortcode();

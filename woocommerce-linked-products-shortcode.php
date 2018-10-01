@@ -207,7 +207,7 @@ class WC_Linked_Products_Shortcode {
 		echo '<style>
 		.woocommerce .wc_cross_sell_shortcode ul.products li.product,
 		.woocommerce-page .wc_cross_sell_shortcode ul.products li.product {
-			width: ' . $width . '%;
+			//width: ' . $width . '%;
 			margin-top: 1em;
 		}</style>';
 	
@@ -231,7 +231,7 @@ class WC_Linked_Products_Shortcode {
 		echo '<style>
 		.woocommerce .wc_upsell_shortcode ul.products li.product,
 		.woocommerce-page .wc_upsell_shortcode ul.products li.product {
-			width: ' . $width . '%;
+			//width: ' . $width . '%;
 			margin-top: 1em;
 		}</style>';
 	

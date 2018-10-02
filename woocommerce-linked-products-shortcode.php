@@ -114,7 +114,7 @@ class WC_Linked_Products_Shortcode {
 		ob_start();	
 
 		?><div class="wc_cross_sell_shortcode"><?php	
-			woocommerce_cross_sell_display();
+			woocommerce_cross_sell_display(-1,4);
 		?></div><?php
 	
 		// output the buffered contents
@@ -280,7 +280,7 @@ if ( ! function_exists( 'woocommerce_cross_sell_display' ) ) {
      * @param  string $orderby (default: 'rand').
      * @param  string $order (default: 'desc').
      */
-    function woocommerce_cross_sell_display( $limit = 2, $columns = 2, $orderby = 'rand', $order = 'desc' ) {
+    function woocommerce_cross_sell_display( $limit = -1, $columns = 4, $orderby = 'rand', $order = 'desc' ) {
         global $product;
 
         if ( ! $product ) {
